@@ -6,6 +6,13 @@ import { errorHandler, notFound, jsonErrorHandler } from './middlewares/errorHan
 
 const app = express();
 
+// CORS configuration - allow localhost and production domains
+const allowedOrigins = [
+  'https://suivle-frontend.vercel.app',
+  'https://suivle.vercel.app',
+  'https://suiflow-frontend.vercel.app', // Temporary: old frontend name during migration
+];
+
 const corsOptions = {
   origin: (origin: string | undefined, callback: (err: Error | null, allow?: boolean) => void) => {
     try {
