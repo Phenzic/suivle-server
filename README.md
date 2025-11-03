@@ -189,10 +189,11 @@ Retrieve a formatted summary of a Sui transaction by its digest (without AI expl
 
 **Request:**
 ```bash
-curl -X POST <BACKEND_URL>/digest \
+curl -X POST https://suivle-servers.fly.dev/ai-digest \
   -H "Content-Type: application/json" \
   -d '{
-    "digest": "DmH3PWELG2ts4fNVrYcGFTp524Twmvo2CrALVYzqvBaf"
+    "digest": "Aw91uJTES7wEamRpkKoezQMVAS1wm9eGF6WJeNgXAKLZ",
+    "network": "testnet"
   }'
 ```
 
