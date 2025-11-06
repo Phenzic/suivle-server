@@ -205,16 +205,7 @@ export async function getNFTMetadata(
     throw new Error(`Invalid object ID: ${objectId}`);
   }
 
-  try {
-    const object = await client.getObject({
-      id: objectId,
-      options: {
-        showContent: true,
-        showDisplay: true,
-        showType: true,
-        showOwner: true,
-      },
-    });
+
 
     return object;
   } catch (error: any) {
